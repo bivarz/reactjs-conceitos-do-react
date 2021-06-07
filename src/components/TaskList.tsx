@@ -4,9 +4,10 @@ import '../styles/tasklist.scss'
 
 import { FiTrash, FiCheckSquare } from 'react-icons/fi'
 
+
+// Crie uma nova task com um id random, não permita criar caso o título seja vazio.
 // Remova uma task da listagem pelo ID
 // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
-// Crie uma nova task com um id random, não permita criar caso o título seja vazio.
 interface Task {
   id: number;
   title: string;
@@ -18,7 +19,7 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
-    // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+
     if (newTaskTitle === '') {
       return
     }
